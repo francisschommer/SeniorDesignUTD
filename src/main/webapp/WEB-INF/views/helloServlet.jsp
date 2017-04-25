@@ -11,20 +11,97 @@
     </head>
     <body>
         <form action="helloServlet" method="post">
-            <h1>Hello</h1>
-            <p>
-                <label for="name">What's your name?</label>
-                <input id="name" name="name" value="${fn:escapeXml(param.name)}">
-                <span class="error">${messages.name}</span>
-            </p>
-            <p>
-                <label for="age">What's your age?</label>
-                <input id="age" name="age" value="${fn:escapeXml(param.age)}">
-                <span class="error">${messages.age}</span>
-            </p>
-            <p>
-                <input type="submit">
-                <span class="success">${messages.success}</span>
+        
+        <div class="panel panel-primary">
+					<div class="panel-heading">
+						<ul class="nav nav-tabs">
+							<li class="active"><a data-toggle="tab" href="#range"
+								class="panel-title">Key</a></li>
+						</ul>
+					</div>
+					<div class="panel-body">
+						<div class="tab-content">
+							<div id="range" class="tab-pane fade in active">
+								<h3>Keyword</h3>
+								
+								<form class="form-inline">
+<%-- 								  <input id="name" name="name" placeholder="hello" value="${fn:escapeXml(param.name)}"> --%>
+								   <input id="output" name="output" placeholder="Enter Search term here" value="${fn:escapeXml(param.output)}">
+								 
+								  <button type="submit" class="btn btn-primary">Submit</button>
+								  <p>
+								  <span class="error">${messages.name}</span>
+
+								  <span class="success">${messages.success}</span></p>
+							</form>
+							</div>
+						</div>
+						</div>
+						
+						
+						</div>
+						
+						<div class="panel panel-primary">
+						<div class="well"> 
+<%-- 						 <input id="output" name="output"  value="${fn:escapeXml(param.output)}"></span></div> --%>
+ 						 <span class="success">${messages.output}</span>
+						</div>
+						</div>
+        
+<%--         				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<ul class="nav nav-tabs">
+							<li class="active"><a data-toggle="tab" href="#range"
+								class="panel-title">Range</a></li>
+							<li><a data-toggle="tab" href="#exactvalue"
+								class="panel-title">Exact Value</a></li>
+						</ul>
+					</div>
+					<div class="panel-body">
+						<div class="tab-content">
+							<div id="range" class="tab-pane fade in active">
+								<h3>Range</h3>
+								
+								<form class="form-inline">
+								  <input id="name" name="name" placeholder="10/25/2015" value="${fn:escapeXml(param.name)}">
+								   to 
+				                <input id="age" name="age" placeholder="10/25/2015" value="${fn:escapeXml(param.age)}">
+								  <button type="submit" class="btn btn-primary">Submit</button>
+								  <p>
+								  <span class="error">${messages.name}</span>
+								   <span class="error">${messages.age}</span>
+								  <span class="success">${messages.success}</span></p>
+							</form>
+							</div>
+						</div>
+					
+				</div>
+				
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<ul class="nav nav-tabs">
+							<li class="active"><a data-toggle="tab" href="#home"
+							class="panel-title">Query Basic</a></li>
+						</ul>
+					</div>
+					<div class="panel-body">
+						<div class="tab-content">
+							<div id="home" class="tab-pane fade in active">
+								<h3>Drag and Drop</h3>
+								<label class="sr-only" for="inlineFormInput">Key</label>
+								  <form class="form-inline">
+								  <input id="key" name="key" placeholder="keyword" value="${fn:escapeXml(param.key)}">
+								  <button type="submit" class="btn btn-primary">Submit</button>
+								  <p>
+								  <span class="error">${messages.key}</span>
+								  <span class="success">${messages.success}</span></p>
+							</form>
+							</div>
+							
+						</div>
+					</div>
+				</div> --%>
+                
             </p>
         </form>
     </body>

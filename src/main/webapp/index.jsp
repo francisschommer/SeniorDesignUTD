@@ -29,32 +29,69 @@
 	<!--      <h1>Theme example</h1> -->
 	<div class="container-fluid text-center">
 		<div class="row content">
-			<div class="col-sm-3 sidenav">
-			
+			<div class="col-sm-2 sidenav">
+
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title">Data</h3>
+						<h3 class="panel-title">Tags</h3>
 					</div>
 					<div class="panel-body">
-						Data
+					<div class="list-group">
+					  <a href="#" class="list-group-item">First item</a>
+					  <a href="#" class="list-group-item">Second item</a>
+					  <a href="#" class="list-group-item">Third item</a>
 					</div>
+</div>
 				</div>
 			</div>
 			<div class="col-sm-8 text-left">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title">Common Functions</h3>
+						<ul class="nav nav-tabs">
+							<li class="active"><a data-toggle="tab" href="#range"
+								class="panel-title">Range</a></li>
+							<li><a data-toggle="tab" href="#exactvalue"
+								class="panel-title">Exact Value</a></li>
+						</ul>
 					</div>
 					<div class="panel-body">
-						Buttons go in here
-					</div>
-				</div>
+						<div class="tab-content">
+							<div id="range" class="tab-pane fade in active">
+								<h3>Range</h3>
+								
+								<form class="form-inline">
+								  <label class="sr-only" for="inlineFormInput">Name</label>
+								  <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="10/24/2015">
+								
+								 to 
+								  <label class="sr-only" for="inlineFormInput">Username</label>
+ 								  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+								    <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputGroup" placeholder="10/24/2016">
+								  </div> 
+								
+								  <button type="submit" class="btn btn-primary">Submit</button>
+							</form>
+							</div>
 
-				<div class="panel panel-primary">
+							<div id="exactvalue" class="tab-pane fade">
+								<h3>Exact Value</h3>
+								<form class="form-inline">
+								  <label class="sr-only" for="inlineFormInput">Name</label>
+								  <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="10/24/2015">
+								
+								  <button type="submit" class="btn btn-primary">Submit</button>
+							</form>
+									
+								</div>
+								</div>
+						</div>
+					
+				</div>
+			<div class="panel panel-primary">
 					<div class="panel-heading">
 						<ul class="nav nav-tabs">
 							<li class="active"><a data-toggle="tab" href="#home"
-								class="panel-title">Query Basic</a></li>
+							class="panel-title">Query Basic</a></li>
 							<li><a data-toggle="tab" href="#menu1" class="panel-title">Advanced</a></li>
 						</ul>
 					</div>
@@ -63,15 +100,19 @@
 							<div id="home" class="tab-pane fade in active">
 								<h3>Drag and Drop</h3>
 								<p>Where things get dragged n' dropped</p>
-								<p><button type="button" class="btn btn-success">Run Query</button></p>
+								<p>
+								<button type="button" class="btn btn-success">Run Query</button>
+							</p>
 							</div>
 							<div id="menu1" class="tab-pane fade">
 								<h3>Advanced Query</h3>
 								<p>
-									<div class="form-horizontal">
+									
+							<div class="form-horizontal">
 										<div class="form-group">
         									<div class="col-md-6">
-            									<textarea class="form-control" rows="8" placeholder="Required" required></textarea>
+            									<textarea class="form-control" rows="8"
+											placeholder="Required" required></textarea>
         									</div>
     									</div>
 									</div>
@@ -87,15 +128,19 @@
 				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<ul class="nav nav-tabs">
-							<li class="active"><a data-toggle="tab" href="#result_home"class="panel-title">Result</a></li>
-							<li><a data-toggle="tab" href="#report_home" class="panel-title">Report</a></li>
+							<li class="active"><a data-toggle="tab" href="#result_home"
+							class="panel-title">Result</a></li>
+							<li><a data-toggle="tab" href="#report_home"
+							class="panel-title">Report</a></li>
 						</ul>
 					</div>
 					<div class="panel-body">
 						<div class="tab-content">
 							<div id="result_home" class="tab-pane fade in active">
 								<h3>Results</h3>
-								<p><div class="well">Elastic Search Query Results</div></p>
+								<p>
+							<div class="well">Elastic Search Query Results</div>
+							</p>
 							</div>
 							<div id="report_home" class="tab-pane fade">
 								<h3>Report</h3>
@@ -110,10 +155,10 @@
 		</div>
 	</div>
 
-
+<!-- 
 	<div class="container theme-showcase" role="main">
 
-		<!-- Main jumbotron for a primary marketing message or call to action -->
+		Main jumbotron for a primary marketing message or call to action
 		<div class="jumbotron">
 			<h1>Theme example</h1>
 			<p>This is a template showcasing the optional theme stylesheet
@@ -457,7 +502,7 @@
 							</ul></li>
 					</ul>
 				</div>
-				<!--/.nav-collapse -->
+				/.nav-collapse
 			</div>
 		</nav>
 
@@ -491,7 +536,7 @@
 							</ul></li>
 					</ul>
 				</div>
-				<!--/.nav-collapse -->
+				/.nav-collapse
 			</div>
 		</nav>
 
@@ -587,7 +632,7 @@
 					<li class="list-group-item">Vestibulum at eros</li>
 				</ul>
 			</div>
-			<!-- /.col-sm-4 -->
+			/.col-sm-4
 			<div class="col-sm-4">
 				<div class="list-group">
 					<a href="#" class="list-group-item active"> Cras justo odio </a> <a
@@ -597,7 +642,7 @@
 						class="list-group-item">Vestibulum at eros</a>
 				</div>
 			</div>
-			<!-- /.col-sm-4 -->
+			/.col-sm-4
 			<div class="col-sm-4">
 				<div class="list-group">
 					<a href="#" class="list-group-item active">
@@ -618,7 +663,7 @@
 					</a>
 				</div>
 			</div>
-			<!-- /.col-sm-4 -->
+			/.col-sm-4
 		</div>
 
 
@@ -640,7 +685,7 @@
 					<div class="panel-body">Panel content</div>
 				</div>
 			</div>
-			<!-- /.col-sm-4 -->
+			/.col-sm-4
 			<div class="col-sm-4">
 				<div class="panel panel-success">
 					<div class="panel-heading">
@@ -655,7 +700,7 @@
 					<div class="panel-body">Panel content</div>
 				</div>
 			</div>
-			<!-- /.col-sm-4 -->
+			/.col-sm-4
 			<div class="col-sm-4">
 				<div class="panel panel-warning">
 					<div class="panel-heading">
@@ -670,7 +715,7 @@
 					<div class="panel-body">Panel content</div>
 				</div>
 			</div>
-			<!-- /.col-sm-4 -->
+			/.col-sm-4
 		</div>
 
 
@@ -726,7 +771,7 @@
 
 
 	</div>
-	<!-- /container -->
+	/container -->
 
 
 
