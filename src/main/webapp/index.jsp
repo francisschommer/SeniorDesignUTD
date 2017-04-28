@@ -8,154 +8,296 @@
 <!--  Here is where I take in the header accross all pages -->
 <jsp:include page="/WEB-INF/views/header_footer.jsp"></jsp:include>
 
+<style>
+.error {
+	color: red;
+}
+
+.success {
+	color: green;
+}
+</style>
 
 <body>
-	<div class="container">
-		<form>
-			<div class="form-group row">
-				<label for="esInstance" class="col-sm-2 col-form-label">Elastic
-					Search URL:</label>
-				<div class="col-sm-8">
-					<input type="text" class="form-control" id="esInstance"
-						name="esInstance" value="${fn:escapeXml(param.esInstance)}">
-				</div>
-				<div class="offset-sm-2 col-sm-2">
-					<button type="submit" class="btn btn-info">Connect</button>
-				</div>
-				<span class="error">${messages.esInstance}</span>
-			</div>
-		</form>
-	</div>
-	<!--      <h1>Theme example</h1> -->
-	<div class="container-fluid text-center">
-		<div class="row content">
-			<div class="col-sm-2 sidenav">
-
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<h3 class="panel-title">Tags</h3>
-					</div>
-					<div class="panel-body">
-					<div class="list-group">
-					  <a href="#" class="list-group-item">First item</a>
-					  <a href="#" class="list-group-item">Second item</a>
-					  <a href="#" class="list-group-item">Third item</a>
-					</div>
-</div>
-				</div>
-			</div>
-			<div class="col-sm-8 text-left">
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<ul class="nav nav-tabs">
-							<li class="active"><a data-toggle="tab" href="#range"
-								class="panel-title">Range</a></li>
-							<li><a data-toggle="tab" href="#exactvalue"
-								class="panel-title">Exact Value</a></li>
-						</ul>
-					</div>
-					<div class="panel-body">
-						<div class="tab-content">
-							<div id="range" class="tab-pane fade in active">
-								<h3>Range</h3>
-								
-								<form class="form-inline">
-								  <label class="sr-only" for="inlineFormInput">Name</label>
-								  <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="10/24/2015">
-								
-								 to 
-								  <label class="sr-only" for="inlineFormInput">Username</label>
- 								  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-								    <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputGroup" placeholder="10/24/2016">
-								  </div> 
-								
-								  <button type="submit" class="btn btn-primary">Submit</button>
-							</form>
-							</div>
-
-							<div id="exactvalue" class="tab-pane fade">
-								<h3>Exact Value</h3>
-								<form class="form-inline">
-								  <label class="sr-only" for="inlineFormInput">Name</label>
-								  <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="10/24/2015">
-								
-								  <button type="submit" class="btn btn-primary">Submit</button>
-							</form>
-									
-								</div>
-								</div>
-						</div>
-					
-				</div>
-			<div class="panel panel-primary">
-					<div class="panel-heading">
-						<ul class="nav nav-tabs">
-							<li class="active"><a data-toggle="tab" href="#home"
-							class="panel-title">Query Basic</a></li>
-							<li><a data-toggle="tab" href="#menu1" class="panel-title">Advanced</a></li>
-						</ul>
-					</div>
-					<div class="panel-body">
-						<div class="tab-content">
-							<div id="home" class="tab-pane fade in active">
-								<h3>Drag and Drop</h3>
-								<p>Where things get dragged n' dropped</p>
-								<p>
-								<button type="button" class="btn btn-success">Run Query</button>
-							</p>
-							</div>
-							<div id="menu1" class="tab-pane fade">
-								<h3>Advanced Query</h3>
-								<p>
-									
-							<div class="form-horizontal">
-										<div class="form-group">
-        									<div class="col-md-6">
-            									<textarea class="form-control" rows="8"
-											placeholder="Required" required></textarea>
-        									</div>
-    									</div>
-									</div>
-								</p>
-								
-							</div>
-						</div>
-					</div>
-				</div>
 
 
 
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<ul class="nav nav-tabs">
-							<li class="active"><a data-toggle="tab" href="#result_home"
-							class="panel-title">Result</a></li>
-							<li><a data-toggle="tab" href="#report_home"
-							class="panel-title">Report</a></li>
-						</ul>
-					</div>
-					<div class="panel-body">
-						<div class="tab-content">
-							<div id="result_home" class="tab-pane fade in active">
-								<h3>Results</h3>
-								<p>
-							<div class="well">Elastic Search Query Results</div>
-							</p>
-							</div>
-							<div id="report_home" class="tab-pane fade">
-								<h3>Report</h3>
-								<p>Fun report options here?</p>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
+
+		<div class="container">
+			
+				<div class="form-group row">
+					<label for="esInstance" class="col-sm-2 col-form-label">Elastic
+						Search URL:</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="esInstance"
+							name="esInstance" value="${fn:escapeXml(param.esInstance)}">
+					</div>
+					<div class="offset-sm-2 col-sm-2">
+						<button type="submit" class="btn btn-info">Connect</button>
+					</div>
+					<span class="error">${messages.esInstance}</span>
+				</div>
 		</div>
-	</div>
+		<!--      <h1>Theme example</h1> -->
+		<div class="container-fluid text-center">
+			<div class="row content">
+				<div class="col-sm-2 sidenav">
 
-<!-- 
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">Tags</h3>
+						</div>
+						<div class="panel-body">
+							<div class="list-group">
+								<a href="#" class="list-group-item">First item</a> <a href="#"
+									class="list-group-item">Second item</a> <a href="#"
+									class="list-group-item">Third item</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-8 text-left">
+					<%--Add Viktoriya's panel here --%>
+					<%-- <div class="panel panel-primary">
+						<div class="panel-heading">
+							<ul class="nav nav-tabs">
+								<li class="active"><a data-toggle="tab" href="#range"
+									class="panel-title">Range</a></li>
+								<li><a data-toggle="tab" href="#exactvalue"
+									class="panel-title">Exact Value</a></li>
+							</ul>
+						</div>
+						<div class="panel-body">
+							<div class="tab-content">
+								<div id="range" class="tab-pane fade in active">
+									<h3>Range</h3>
+
+									<form class="form-inline">
+										<label class="sr-only" for="inlineFormInput">Name</label> <input
+											type="text" class="form-control mb-2 mr-sm-2 mb-sm-0"
+											id="inlineFormInput" placeholder="10/24/2015"> to <label
+											class="sr-only" for="inlineFormInput">Username</label>
+										<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+											<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0"
+												id="inlineFormInputGroup" placeholder="10/24/2016">
+										</div>
+
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</form>
+								</div>
+
+								<div id="exactvalue" class="tab-pane fade">
+									<h3>Exact Value</h3>
+									<!-- <form class="form-inline">
+								  <label class="sr-only" for="inlineFormInput">Name</label>
+								  <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="10/24/2015">
+								
+								  <button type="submit" class="btn btn-primary">Submit</button>
+							</form> -->
+
+									<form class="form-inline">
+										<input id="output" name="output"
+											placeholder="Enter Search term here"
+											value="${fn:escapeXml(param.output)}">
+
+										<button type="submit" class="btn btn-primary">Submit</button>
+										<p>
+											<span class="error">${messages.name}</span> <span
+												class="success">${messages.success}</span>
+										</p>
+									</form>
+
+								</div>
+							</div>
+						</div>
+
+					</div> --%>
+					<%--add vika's form here: --%>
+					<form action="index" method="post">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<ul class="nav nav-tabs">
+									<li class="active"><a data-toggle="tab" href="#exactvalue"
+										class="panel-title">Exact Value</a></li>
+									<li ><a data-toggle="tab" href="#range"
+										class="panel-title">Range</a></li>
+								</ul>
+							</div>
+
+							<div class="panel-body">
+								<div class="tab-content">
+									<div id="exactvalue" class="tab-pane fade in active">
+										<h3>Exact Value</h3>
+										
+											<input id="output" name="output"
+												placeholder="Enter Search term here"
+												value="${fn:escapeXml(param.output)}">
+
+											<button type="submit" name="button1" class="btn btn-success">Run
+												Query</button>
+											<p>
+												<span class="error">${messages.name}</span> <span
+													class="success">${messages.success}</span>
+											</p>
+										
+									</div>
+									<div id="range" class="tab-pane fade">
+										<h3>Date of Birth Range</h3>
+										
+											<input name="rangeMin" id="rangeMin"
+												placeholder="min range"
+												value="${fn:escapeXml(param.rangeMin)}"> to 
+											<input name="rangeMax" id="rangeMax"
+												placeholder="max range"
+												value="${fn:escapeXml(param.rangeMax)}">
+											<button type="submit" name="button2" class="btn btn-success">Submit</button>
+											<p>
+												<span class="error">${messages.name}</span> <span
+													class="success">${messages.success}</span>
+											</p>
+										
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+
+						<%-- <div class="panel panel-primary">
+				<div class="panel-heading">
+					<ul class="nav nav-tabs">
+						<li class="active"><a data-toggle="tab" href="#result"
+							class="panel-title">Result</a></li>
+					</ul>
+				</div>
+				<div class="panel-body">
+					<div class="tab-content">
+						<div id="result" class="tab-pane fade in active">
+							<h3>Result</h3>
+
+							<div class="well">
+								<span class="success">${messages.output}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> --%>
+
+
+						<!-- <div class="col-sm-8 text-left">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<ul class="nav nav-tabs">
+						<li class="active"><a data-toggle="tab" href="#range"
+							class="panel-title">Range</a></li>
+						<li><a data-toggle="tab" href="#exactvalue"
+							class="panel-title">Exact Value</a></li>
+					</ul>
+				</div>
+				<div class="container-fluid text-center">
+					<div class="row content">
+						<div class="panel-body">
+							<div class="tab-content">
+								<div id="range" class="tab-pane fade in active">
+									<h3>Range</h3>
+
+									<form class="form-inline">
+										<label class="sr-only" for="inlineFormInput">Name</label> <input
+											type="text" class="form-control mb-2 mr-sm-2 mb-sm-0"
+											id="inlineFormInput" placeholder="10/24/2015"> to <label
+											class="sr-only" for="inlineFormInput">Username</label>
+										<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+											<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0"
+												id="inlineFormInputGroup" placeholder="10/24/2016">
+										</div>
+
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</form>
+								</div>
+								
+								<div id="exactvalue" class="tab-pane fade">
+									<h3>Exact Value</h3>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+					</form>
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<ul class="nav nav-tabs">
+								<li class="active"><a data-toggle="tab" href="#home"
+									class="panel-title">Query Basic</a></li>
+								<li><a data-toggle="tab" href="#menu1" class="panel-title">Advanced</a></li>
+							</ul>
+						</div>
+						<div class="panel-body">
+							<div class="tab-content">
+								<div id="home" class="tab-pane fade in active">
+									<h3>Drag and Drop</h3>
+									<p>Where things get dragged n' dropped</p>
+									<p>
+										<!-- 										<button type="button" class="btn btn-success">Run -->
+										<!-- 											Query</button> -->
+									</p>
+								</div>
+								<div id="menu1" class="tab-pane fade">
+									<h3>Advanced Query</h3>
+									<p>
+									<div class="form-horizontal">
+										<div class="form-group">
+											<div class="col-md-6">
+												<textarea class="form-control" rows="8"
+													placeholder="Required" required></textarea>
+											</div>
+										</div>
+									</div>
+									</p>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<ul class="nav nav-tabs">
+								<li><a data-toggle="tab" href="#result_home"
+									class="panel-title">Result</a></li>
+								<li class="active"><a data-toggle="tab" href="#report_home"
+									class="panel-title">Report</a></li>
+							</ul>
+						</div>
+						<div class="panel-body">
+							<div class="tab-content">
+								<div id="result_home" class="tab-pane fade ">
+									<h3>Result</h3>
+									<div class="well">
+										<span class="success">${messages.fullElasticSearchOutput}</span>
+									</div>
+								</div>
+								<div id="report_home" class="tab-pane fade in active">
+									<h3>Report</h3>
+									<div class="well">
+										<span class="success">${messages.output}</span>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- 
 	<div class="container theme-showcase" role="main">
 
 		Main jumbotron for a primary marketing message or call to action
@@ -773,7 +915,6 @@
 	</div>
 	/container -->
 
-
-
+		<!-- </form>  -->
 </body>
 </html>

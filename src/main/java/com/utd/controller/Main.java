@@ -39,9 +39,16 @@ public class Main {
 
         // System.out.println("tesst searchKeywordValue");
         
-        //String json = "{\"Breed\":\"Sheltie\",\"dateOfBirth\":2020,\"Name\":\"Husky Martin\"}";
-       // putstuff(client, json, "animals", "dogs");
-        
+     /*   String json = "{\"Breed\":\"Husky\",\"dateOfBirth\":2015,\"Name\":\"Francis Schommer\"}";
+        putstuff(client, json, "animals", "dogs");
+        json = "{\"Breed\":\"Dobie\",\"dateOfBirth\":2011,\"Name\":\"Cody Cornelius\"}";
+        putstuff(client, json, "animals", "dogs");
+        json = "{\"Breed\":\"Hound\",\"dateOfBirth\":2008,\"Name\":\"Viktoriya Kozmina\"}";
+        putstuff(client, json, "animals", "dogs");
+        json = "{\"Breed\":\"Retriever\",\"dateOfBirth\":2003,\"Name\":\"Micah Leigh\"}";
+        putstuff(client, json, "animals", "dogs");
+        json = "{\"Breed\":\"Pomeranian\",\"dateOfBirth\":2017,\"Name\":\"J.T. Sutherland\"}";
+        putstuff(client, json, "animals", "dogs");*/
        // System.out.println(searchKeywordValue(client, "animals", "dogs", "Breed", "Husky"));
         //printJsonToFile(client);
 
